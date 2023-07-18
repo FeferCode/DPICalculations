@@ -29,41 +29,41 @@ public struct DPIScreenData {
     public private(set) var numberOfMegaPixels:Float = 0
     public private(set) var PPI:Float = 0
 
-    mutating func setBaseData(_ data: DPIBaseScreenData) {
+    internal mutating func setBaseData(_ data: DPIBaseScreenData) {
         self.resolution.x = data.resolution.x
         self.resolution.y = data.resolution.y
         self.screenDiagonalInInch = data.screenDiagonalInInch
     }
 
-    mutating func setRatio(x:Int, y:Int, aspectRatio:Float) {
+    internal mutating func setRatio(x: Int, y: Int, aspectRatio: Float) {
         self.ratio.x = x
         self.ratio.y = y
         self.aspectRatio = aspectRatio
     }
 
-    mutating func setScreenSize(xInch: Float, yInch: Float, xCm: Float, yCm: Float) {
+    internal mutating func setScreenSize(xInch: Float, yInch: Float, xCm: Float, yCm: Float) {
         self.screenSizeInCm.x = xCm
         self.screenSizeInCm.y = yCm
         self.screenSizeInInch.x = xInch
         self.screenSizeInInch.y = yInch
     }
 
-    mutating func setWorkSurface(cm: Float, inch: Float) {
+    internal mutating func setWorkSurface(cm: Float, inch: Float) {
         self.workSurfaceInCm = cm
         self.workSurfaceInInch = inch
     }
 
-    mutating func setNumberOf(pixels: Int, megaPixels: Float) {
+    internal mutating func setNumberOf(pixels: Int, megaPixels: Float) {
         self.numberOfPixels = pixels
         self.numberOfMegaPixels = megaPixels
     }
 
-    mutating func setPPI(_ ppi: Float){
+    internal mutating func setPPI(_ ppi: Float){
         self.PPI = Float(ppi)
 
     }
 
-    mutating func setDisplayData(year: String, model: String, company: String) {
+    internal mutating func setDisplayData(year: String, model: String, company: String) {
         self.company = company
         self.model = model
         self.year = year

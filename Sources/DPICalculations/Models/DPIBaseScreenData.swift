@@ -13,20 +13,14 @@ public struct DPIBaseScreenData: CustomStringConvertible {
     public private(set) var screenDiagonalInInch: Float
     public private(set) var data: Date
 
-    init?(builder: DPIBaseScreenDataBuilder) {
-        if let x = builder.resolution.x,
-            let y = builder.resolution.y,
-            let diagonal = builder.screenDiagonalInInch {
-            resolution.x = x
-            resolution.y = y
-            screenDiagonalInInch = diagonal
-            data = Date()
-        } else {
-            return nil
-        }
+    init(xPixel: Int, yPixel: Int, diagonal: Float) {
+        resolution.x = xPixel
+        resolution.y = yPixel
+        screenDiagonalInInch = diagonal
+        data = Date()
     }
 
-    public var description:String {
+    public var description: String {
         return "Resolution: \(resolution.x)x\(resolution.y) with \(screenDiagonalInInch)\""
     }
 }
