@@ -9,15 +9,14 @@ public class DPICalculations: DPIFacade {
 
     private let calculationManager = DPICalculationManager()
 
-    public let shared: DPICalculations = {
+    public static let shared: DPICalculations = {
         let shared = DPICalculations()
         return shared
     }()
 
-    public init() { }
+    private init() { }
 
     public func calculateAllData(ForScreen data: DPIBaseScreenData) -> DPIScreenData {
-
         return calculationManager.calculateAllData(ForScreen: data)
     }
     

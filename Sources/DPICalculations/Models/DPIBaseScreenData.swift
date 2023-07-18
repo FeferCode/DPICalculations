@@ -13,7 +13,7 @@ public struct DPIBaseScreenData: CustomStringConvertible {
     public private(set) var screenDiagonalInInch: Float
     public private(set) var data: Date
 
-    init(xPixel: Int, yPixel: Int, diagonal: Float) {
+    public init(xPixel: Int, yPixel: Int, diagonal: Float) {
         resolution.x = xPixel
         resolution.y = yPixel
         screenDiagonalInInch = diagonal
