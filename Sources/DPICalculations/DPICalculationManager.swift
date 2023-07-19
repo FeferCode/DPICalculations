@@ -109,3 +109,5 @@ internal class DPICalculationManager {
 struct ConstantValues {
     static let inch: Float = 2.54
 }
+
+// Create me a struct with all data
